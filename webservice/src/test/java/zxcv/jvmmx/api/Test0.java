@@ -45,7 +45,7 @@ public class Test0 {
   }
 
   @Test
-  @DisplayName("Se valida que se el puerto en configuracion sea un Integer")
+  @DisplayName("Se valida que el puerto en configuracion sea un Integer")
   void test1(Vertx vertx, VertxTestContext testContext) {
     var config = new JsonObject()
       .put("port", "SSSS");
@@ -108,7 +108,7 @@ public class Test0 {
       .send(emitter::onSuccess);
     });
   }
-  
+
   private static <T, V> Single<AsyncResult<Message<V>>> request(Vertx vertx, String address, T message) {
     return Single.create(emitter -> vertx.eventBus().request(address, message, emitter::onSuccess));
   }
