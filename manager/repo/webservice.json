@@ -1,0 +1,6 @@
+{
+  "module": "maven:zxcv.jvmmx:webservice:1.0::service",
+  "config": {
+    "port": 8081
+  }
+}

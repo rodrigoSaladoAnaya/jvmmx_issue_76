@@ -1,0 +1,6 @@
+{
+  "module": "maven:zxcv.jvmmx:database:1.1::service",
+  "config": {
+    "test": "123"
+  }
+}
