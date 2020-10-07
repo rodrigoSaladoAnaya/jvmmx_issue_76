@@ -14,7 +14,8 @@ public class WebserviceVerticle extends AbstractVerticle {
 
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
-    Server.create(vertx)
+    var config = context.config();
+    Server.create(vertx, config)
       .doOnSuccess(n -> log.info("+++ WebserviceVerticle inicido"))
       .subscribe(
         n -> startPromise.complete(),
