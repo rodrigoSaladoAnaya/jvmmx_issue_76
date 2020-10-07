@@ -30,13 +30,6 @@ public class Server {
 
   private Single<Server> payment() {
     router.route("/payment").handler(Payment::create);
-    /*
-    router.route("/payment").handler(context -> {
-      var response = context.response();
-      response.putHeader("content-type", "text/plain");
-      response.end("Hello JVMMX!");
-    });
-    /**/
     return Single.just(this);
   }
 
